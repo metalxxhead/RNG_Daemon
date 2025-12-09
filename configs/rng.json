@@ -1,0 +1,27 @@
+{
+  "device": {
+    "name": "undefined"
+  },
+
+  "patterns": {
+    "visible": ["333", "1111", "222", "434"],
+    "control": {
+      "salt": "C0ntrolSalt_v1",
+      "hash": "52e348dda6a032c5e24a8a0c66a3e22947b99ab5c9a251dcbad85bf914ec16e1"
+    }
+  },
+
+  "runtime": {
+    "interval_ms": 1000,
+    "window_size": 10
+  },
+
+  "sockets": {
+    "unix_path": "data/rng.sock"
+  },
+
+  "logging": {
+    "log_ndjson_patterns": "data/analyzer_stream_patterns.ndjson",
+    "log_ndjson_control": "data/analyzer_stream_control.ndjson"
+  }
+}

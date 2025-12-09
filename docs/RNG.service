@@ -1,0 +1,21 @@
+[Unit]
+Description=RNG Daemon (Mono)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mono /home/username/Downloads/RNG_Daemon/build/rng.exe
+WorkingDirectory=/home/username/Downloads/RNG_Daemon/build/
+Restart=always
+RestartSec=5
+
+# Run as your user (optional but recommended)
+User=username
+Group=users
+
+# Make sure mono can see environment PATH, etc.
+Environment=MONO_ENV_OPTIONS=--debug
+
+[Install]
+WantedBy=multi-user.target
+
