@@ -22,8 +22,12 @@ chmod +x scripts/run.sh
 Ubuntu:  sudo apt install libnewtonsoft-json8.0-cil
 Arch:  Obtain from https://github.com/JamesNK/Newtonsoft.Json/
 or install package on Ubuntu and obtain from the below path:
+/usr/lib/cli/Newtonsoft.Json-5.0/Newtonsoft.Json.dll
 
+### DLL must be copied to both build/ and lib/:
 cp /usr/lib/cli/Newtonsoft.Json-5.0/Newtonsoft.Json.dll build/
+cp /usr/lib/cli/Newtonsoft.Json-5.0/Newtonsoft.Json.dll lib/
+cp /usr/lib/cli/Newtonsoft.Json-5.0/Newtonsoft.Json.dll test/ # optional unless running test code
 
 scripts/build.sh
 

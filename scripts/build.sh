@@ -35,7 +35,7 @@ echo "Detecting optional modules..."
 if [ -d "$ROOT_DIR/src/modules/json" ]; then
     echo " - JSON module: present"
 
-    DLL="$ROOT_DIR/src/modules/json/lib/Newtonsoft.Json.dll"
+    DLL="$ROOT_DIR/lib/Newtonsoft.Json.dll"
     if [ -f "$DLL" ]; then
         REFERENCES="$REFERENCES -r:$DLL"
     else
